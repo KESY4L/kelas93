@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelas 93</title>
+    <style>
+        /* Styling Dasar */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Styling */
+        .header {
+            background: #d7dadb;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header h1 {
+            font-size: 4em;
+            color: #333;
+            animation: fadeInDown 2s ease-out forwards;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #666;
+            margin-top: 20px;
+            animation: fadeInUp 2s ease-out forwards;
+        }
+
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1.2s ease, transform 1.2s ease;
+        }
+
+        .section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Parallax Section */
+        .parallax {
+            background: url('https://picsum.photos/1920/1080') no-repeat center center fixed;
+            background-size: cover;
+            height: 500px;
+            opacity: 0.85;
+            filter: brightness(0.7);
+        }
+
+        /* Bagian Konten Panjang */
+        .long-content {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(70px);
+            transition: opacity 1.5s ease, transform 1.5s ease;
+        }
+
+        .long-content.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Animasi untuk Item Kelas */
+        .class-item {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 400px;
+            background-color: #b0bec5;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .class-item:hover {
+            transform: scale(1);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 30px;
+            background: #eceff1;
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Smooth Scroll Script */
+        .scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1.5s ease, transform 1.5s ease;
+        }
+
+        .scroll.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Fade-in Effect for Background */
+        .bg-fade {
+            animation: bgFade 3s forwards ease;
+        }
+
+        @keyframes bgFade {
+            0% { opacity: 0; }
+            100% { opacity: 0.85; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Kelas 93</h1>
+        <p>Selamat datang di halaman Kelas 93, tempat inspirasi dan pembelajaran</p>
+    </header>
+
+    <!-- Parallax Section -->
+    <div class="parallax bg-fade"></div>
+
+    <!-- Profil Section -->
+    <section class="section scroll">
+        <h2>Profil Kelas 93</h2>
+        <p>Kelas 93 merupakan komunitas belajar yang didedikasikan untuk pengembangan diri melalui pengalaman akademik dan kegiatan sosial yang positif. Kami berkomitmen untuk mencapai prestasi terbaik dengan penuh semangat.</p>
+    </section>
+
+    <!-- Parallax Section Kedua -->
+    <div class="parallax bg-fade" style="background-image: url('https://picsum.photos/1920/1080?random=2');"></div>
+
+    <!-- Mata Pelajaran Section -->
+    <section class="section scroll">
+        <h2>Mata Pelajaran yang Kami Pelajari</h2>
+        <div class="class-item">Matematika</div>
+        <div class="class-item">Bahasa Indonesia</div>
+        <div class="class-item">Ilmu Pengetahuan Alam</div>
+        <div class="class-item">Ilmu Pengetahuan Sosial</div>
+        <div class="class-item">Bahasa Inggris</div>
+        <div class="class-item">Seni Budaya</div>
+        <div class="class-item">Pendidikan Jasmani</div>
+    </section>
+
+    <!-- Parallax Section Ketiga -->
+    <div class="parallax bg-fade" style="background-image: url('https://picsum.photos/1920/1080?random=3');"></div>
+
+    <!-- Kegiatan dan Pencapaian Section -->
+    <section class="section long-content scroll">
+        <h2>Kegiatan dan Pencapaian Kelas</h2>
+        <p>Kami aktif dalam berbagai kegiatan ekstrakurikuler, seperti klub debat, tim olahraga, dan komunitas seni, untuk mendukung minat siswa di berbagai bidang.</p>
+        <p>Kelas 93 telah meraih beberapa prestasi di tingkat regional dan nasional, menjadi bukti semangat kompetisi dan persatuan kami.</p>
+        <p>Kegiatan sosial seperti bakti sosial dan kampanye lingkungan juga menjadi agenda rutin kami sebagai bentuk kepedulian terhadap masyarakat.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 Kelas 93 - Semua Hak Cipta Dilindungi</p>
+    </footer>
+
+    <!-- Script Animasi saat Scroll -->
+    <script>
+        function revealOnScroll() {
+            const sections = document.querySelectorAll('.scroll, .long-content');
+            sections.forEach(section => {
+                const sectionPos = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight / 1.2;
+                if (sectionPos < windowHeight) {
+                    section.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+    </script>
+
+</body>
+</html>
